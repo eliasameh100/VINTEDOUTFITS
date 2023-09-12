@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 </head>
 <style>
     .mmm{
@@ -28,5 +28,13 @@
         </div>
         <?php include_once "components/cards.php"?>
     </div>
+    <h1 class="text-center">Our Sponsors</h1>
+    <section id="brand" class="container">
+        <div class="row-sm my-4">
+            <img src="assets/images/adidas.png" alt="" class="img-fluid col-lg-3 col-md-6 col-sm-12">
+            <img src="assets/images/Amazon.png" alt="" class="img-fluid col-lg-3 col-md-6 col-sm-12">
+            <img src="assets/images/Puma.jpg" alt="" class="img-fluid col-lg-3 col-md-6 col-sm-12">
+        </div>
+    </section>
 </body>
 </html>

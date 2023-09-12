@@ -1,9 +1,15 @@
 <?php 
+ include "classes/Product.php";
 if(isset($_GET['id'])){
-    include "classes/Product.php";
     $id=$_GET['id'];
     $products=new Products();
     $product=$products->getProductById($id);
+
+    if(isset($_POST['id'])){
+        $id=$_POST['id'];
+        $cart=new Carts();
+        $cartinstance=$cart->addingToCart($productid,$productname,$productprice);
+    }
 }
 ?>
 
@@ -25,9 +31,13 @@ if(isset($_GET['id'])){
         <h3><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
         <h6><?php echo '$'.$product['productprice'];?></h6>
-        <div class="d-flex gap-1" style="justify-content:center">
-            <button class="btn btn-secondary" type="button">Add To Cart</button>
-            <button class="btn btn-dark" type="button">Remove From Cart</button>
+        <div class="my-1">
+            <form action="cart.php?id=<?php echo $product['id'];?>">
+                <input type="hidden" name="id" value="<?php echo $product['id'];?>">
+                <label class="h6">Quantity:</label>
+                <input type="number" name="quantity">
+                <button name="cart" class="btn btn-secondary" type="submit">Add To Cart</button>
+            </form>
         </div>
     </div>
 </body>

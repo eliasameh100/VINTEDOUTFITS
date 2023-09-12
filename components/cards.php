@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
     <title>Cards</title>
 </head>
-<body class="bg-dark">
+<body>
 <div class="container d-flex" style="justify-content:space-between;">
     <div class="card" style="width: 18rem;">
         <img src="assets/images/Tunic.png" class="card-img-top" alt="...">

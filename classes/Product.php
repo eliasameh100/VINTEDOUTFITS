@@ -19,5 +19,7 @@ class Products{
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+    //Cart
+    
 }
 ?>

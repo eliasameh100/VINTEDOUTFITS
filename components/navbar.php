@@ -20,6 +20,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img class="bbb" src="assets/images/logo.png" alt="">
+ <h4 class="text-danger">Vintedoutfits</h4>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,13 +32,16 @@
         <li class="nav-item">
           <a class="nav-link" href="products.php">Products</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.php">Cart</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">About Us</a></li>
-            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            <li><a class="dropdown-item" href="About.php">About Us</a></li>
+            <li><a class="dropdown-item" href="contact.php">Contact Us</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
