@@ -2,47 +2,49 @@
 session_start();
 include "classes/Cart.php";
 $cart=new Carts();
-$item=$cart->getAllCartItems();
+$cart_ins=$cart->getAllCartItems();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
-    <title>Cart</title>
 </head>
 <body>
-    <?php include "components/navbar.php" ?>
+    <?php
+            if(isset($_SESSION['success'])){
+                echo $_SESSION['success'];
+                unset ($_SESSION['success']);
+            }
+            if(isset($_SESSION['error'])){
+                echo $_SESSION['error'];
+                unset ($_SESSION['error']);
+            }
+    ?>
     <table class="table">
         <tr>
             <th>ID</th>
             <th>PRODUCTID</th>
-            <th>PRODUCTNAME</th>
-            <th>PRODUCTPRICE</th>
-            <th>PRODUCTQUANTITY</th>
-            <th>OPERATIONS</th>
+            <th>NAME</th>
+            <th>QUANTITY</th>
+            <th>PRICE</th>
         </tr>
-        <?php foreach ($item as $items){?>
+        <?php foreach($cart_ins as $item){?>
         <tr>
-            <td><?php echo $items['id'];?></td>
-            <td><?php echo $items['productid'];?></td>
-            <td><?php echo $items['productname'];?></td>
-            <td><?php echo '$'.$items['productprice'];?></td>
-            <td><?php echo $items['quantity'];?></td>
+            <td><?php echo $item['id'];?></td>
+            <td><?php echo $item['productid'];?></td>
+            <td><?php echo $item['itemname'];?></td>
+            <td><?php echo $item['quantity'];?></td>
+            <td><?php echo '$'.$item['itemprice'];?></td>
             <td>
-                <a href="processes/deletecart.php?id=<?php echo $items['id'];?>" class="btn btn-dark">Remove</a>
-                <a href="#" class="btn btn-info">Edit</a>
+                <a class="btn btn-danger btn-sm" href="processes/deletecart.php?id=<?php echo $item['id'];?>">Remove</a>
             </td>
         </tr>
         <?php }?>
     </table>
-            <form action="processes/order.php">
-                <div class="container my-4">
-                    <button name="order" class="btn btn-secondary">Place Order</button>
-                </div>
-            </form>
+    <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
 </body>
 </html>

@@ -1,16 +1,19 @@
-<?php 
+<?php
+session_start(); 
  include "classes/Product.php";
 if(isset($_GET['id'])){
     $id=$_GET['id'];
     $products=new Products();
     $product=$products->getProductById($id);
-
-    if(isset($_POST['id'])){
-        $id=$_POST['id'];
-        $cart=new Carts();
-        $cartinstance=$cart->addingToCart($productid,$productname,$productprice);
-    }
+    $_SESSION['itemname']=$product['productname'];
+    $_SESSION['itemprice']=$product['productprice'];
 }
+// if(isset($_POST['quantity'])){
+//     $quantity=$_POST['quantity'];
+//     $sql="INSERT INTO cart WHERE quantity=$quantity";
+//     $stmt=$pdo->prepare($sql);
+//     $result=$stmt->execute([$quantity]);
+// }
 ?>
 
 
@@ -26,19 +29,27 @@ if(isset($_GET['id'])){
     <?php
         include "components/navbar.php";
      ?>
+     <?php
+        if(isset($_SESSION['error']))
+        ?>
     <div class=" text-center container">
     <?php echo '<img src="uploads/'.$product['productimages'].'" alt="">';?>
         <h3><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
         <h6><?php echo '$'.$product['productprice'];?></h6>
-        <div class="my-1">
-            <form action="cart.php?id=<?php echo $product['id'];?>">
+        <form method="Get">
+            <input type="number" name="quantity" value="1" size="2">
+        </form>
+        <a href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary">Add To Cart</a>
+        <!-- <div class="my-1">
+            <form action="cart.php?id=<?php echo $product['id'];?>" method="Get">
                 <input type="hidden" name="id" value="<?php echo $product['id'];?>">
                 <label class="h6">Quantity:</label>
-                <input type="number" name="quantity">
-                <button name="cart" class="btn btn-secondary" type="submit">Add To Cart</button>
+                <div class="cart-action">
+                </div>
+             <a href="processes/addcart.php" name="cart" class="btn btn-secondary" type="submit">Add To Cart</a>   
             </form>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

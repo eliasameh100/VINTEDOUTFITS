@@ -1,8 +1,8 @@
 <?php
 class Carts{
     public function addingToCart($productid,$productname,$productprice){
-        include "config/dbconnect.php";
-        $sql="INSERT INTO  cart (productid,productname,productprice,quantity) VALUES (?,?,?,1)";
+        include "../config/dbconnect.php";
+        $sql="INSERT INTO  cart (productid, itemname, itemprice, quantity) VALUES (?,?,?,1)";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$productid,$productname,$productprice]);
         return $result;
@@ -14,6 +14,15 @@ class Carts{
         $stmt=$pdo->prepare($sql);
         $stmt->execute();
         $result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function getCartItemById($productid){
+        include "config/dbconnect.php";
+        $sql="SELECT FROM cart WHERE id=productid";
+        $stmt=$pdo->prepare($sql);
+        $stmt->execute([$productid]);
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -65,5 +74,7 @@ class Carts{
         $result=$stmt->execute([$account]);
         return $result;
     }
+
+    
 }
 ?>
