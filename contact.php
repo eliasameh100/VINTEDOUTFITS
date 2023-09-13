@@ -45,9 +45,9 @@
                 <p class="text-center">
                     Social Media Platform<br>
                     Contact mathias On Whatsapp:+234-8166579320<br>
-                    <!-- image of whatsapp logo -->
+                    <a href="https://whatsapp.com/https://wa.me/message/4XKS25KC6N64E1"><img src="assets/images/whatsapp.png" alt="" class="img-fluid" style="width:20px;"></a><br>
                     Contact nastee Jay on Facebook:<br>
-                    <!-- image of facebook logo -->
+                    <a href="https://facebook.com"><img src="assets/images/whatsapp.png" alt="" class="img-fluid" style="width:20px;"></a><br>
                     Contact King Praise ON Instagram/Telegram/Tiktok:
                     <!-- images -->
                 </p>

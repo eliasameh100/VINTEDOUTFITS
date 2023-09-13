@@ -14,6 +14,7 @@ $cart_ins=$cart->getAllCartItems();
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 </head>
 <body>
+    <?php include "components/navbar.php";?>
     <?php
             if(isset($_SESSION['success'])){
                 echo $_SESSION['success'];
@@ -44,6 +45,9 @@ $cart_ins=$cart->getAllCartItems();
             </td>
         </tr>
         <?php }?>
+        <div class="text-end">
+            h1
+        </div>
     </table>
     <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
 </body>

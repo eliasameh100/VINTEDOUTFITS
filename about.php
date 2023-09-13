@@ -11,6 +11,7 @@
     <title>Cards</title>
 </head>
 <body>
+<?php include "components/navbar.php";?>
 <div class="container d-flex" style="justify-content:space-between;">
     <div class="card" style="width: 18rem;">
         <img src="assets/images/math.jpg" class="card-img-top" alt="...">
@@ -40,7 +41,7 @@
                 <h5 class="card-title">Nastee Jay</h5>
                 <p class="h6">CEO</p>
                 <p class="card-text">
-                    
+
                 </p>
             </div>
     </div>
