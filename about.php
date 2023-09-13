@@ -13,26 +13,35 @@
 <body>
 <div class="container d-flex" style="justify-content:space-between;">
     <div class="card" style="width: 18rem;">
-        <img src="assets/images/Tunic.png" class="card-img-top" alt="...">
+        <img src="assets/images/math.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Tunic</h5>
-                <p class="card-text">A tunic is a loose fitted long top, usually finishing around mid-thigh.</p>
+                <h5 class="card-title">Mathias Iseko</h5>
+                <p class="h6">Manager</p>
+                <p class="card-text">
+                    
+                </p>
             </div>
     </div>
 
     <div class="card" style="width: 18rem;">
-        <img src="assets/images/Asym.png" class="card-img-top" alt="...">
+        <img src="assets/images/Praise.jpg" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Asymmetric skirts</h5>
-                <p class="card-text">Asymmetric skirts have a hem that is higher on one side than the other. </p>
+                <h5 class="card-title">King Praise</h5>
+                <p class="h6">Director</p>
+                <p class="card-text">
+
+                </p>
             </div>
     </div>
 
     <div class="card" style="width: 18rem;">
-        <img src="assets/images/bermuda.png" class="card-img-top" alt="...">
+        <img src="assets/images/elias jay.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Bermuda Shorts</h5>
-                <p class="card-text">Bermuda shorts are longer shorts, almost reaching the knee. </p>
+                <h5 class="card-title">Nastee Jay</h5>
+                <p class="h6">CEO</p>
+                <p class="card-text">
+                    
+                </p>
             </div>
     </div>
 </div>
