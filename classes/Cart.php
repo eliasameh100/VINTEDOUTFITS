@@ -67,14 +67,7 @@ class Carts{
         return $result;
     }
 
-    public function payment($account){
-        include "config/dbconnect.php";
-        $sql="INSERT INTO orders(account) VALUES (?)";
-        $stmt=$pdo->prepare($sql);
-        $result=$stmt->execute([$account]);
-        return $result;
-    }
-
+    
     public function totalPrice(){
         include "config/dbconnect.php";
         $sql="SELECT SUM(itemprice) FROM cart";
