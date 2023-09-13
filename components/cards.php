@@ -16,7 +16,7 @@
         <img src="assets/images/Tunic.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Tunic</h5>
-                <p class="card-text">A tunic is a loose fitted long top, usually finishing around mid-thigh.</p>
+                <p class="card-text">A Tunic is a loose fitted long top, usually finishing around mid-thigh.</p>
             </div>
     </div>
 
