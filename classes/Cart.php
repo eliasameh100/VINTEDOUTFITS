@@ -75,6 +75,13 @@ class Carts{
         return $result;
     }
 
-    
+    public function totalPrice(){
+        include "config/dbconnect.php";
+        $sql="SELECT SUM(itemprice) FROM cart";
+        $stmt=$pdo->prepare($sql);
+        $stmt->execute();
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
 ?>
