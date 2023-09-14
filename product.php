@@ -8,7 +8,10 @@ if(isset($_GET['id'])){
     $_SESSION['id']=$product['id'];
     $_SESSION['itemname']=$product['productname'];
     $_SESSION['itemprice']=$product['productprice'];
+    $_SESSION['category']=$product['category'];
 }
+$product_category=$_SESSION['category'];
+$category=$products->
 ?>
 
 
