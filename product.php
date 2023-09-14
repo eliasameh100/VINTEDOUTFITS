@@ -5,15 +5,10 @@ if(isset($_GET['id'])){
     $id=$_GET['id'];
     $products=new Products();
     $product=$products->getProductById($id);
+    $_SESSION['id']=$product['id'];
     $_SESSION['itemname']=$product['productname'];
     $_SESSION['itemprice']=$product['productprice'];
 }
-// if(isset($_POST['quantity'])){
-//     $quantity=$_POST['quantity'];
-//     $sql="INSERT INTO cart WHERE quantity=$quantity";
-//     $stmt=$pdo->prepare($sql);
-//     $result=$stmt->execute([$quantity]);
-// }
 ?>
 
 
