@@ -76,5 +76,21 @@ class Carts{
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function increaseQuantity($itemprice,$id){
+        include "config/dbconnect.php";
+        $sql="UPDATE cart SET itemprice=itemprice+1,quantity=quantity+1 WHERE id=?";
+        $stmt=$pdo->prepare($sql);
+        $result=$stmt->execute([$itemprice,$id]);
+        return $result;
+    }
+
+    public function reduceQuantity($itemprice,$id){
+        include "config/dbconnect.php";
+        $sql="UPDATE cart SET itemprice=itemprice-1.quantity=quantity-1 WHERE id=?";
+        $stmt=$pdo->prepare($sql);
+        $result=$stmt->execute([$itemprice,$id]);
+        return $result;
+    }
 }
 ?>
