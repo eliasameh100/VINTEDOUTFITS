@@ -3,6 +3,7 @@ session_start();
 include "classes/Cart.php";
 $cart=new Carts();
 $cart_ins=$cart->getAllCartItems();
+$_SESSION['itemprice']=$cart_ins['productprice'];
 ?>
 
 <!DOCTYPE html>
