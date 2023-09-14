@@ -19,7 +19,13 @@ class Products{
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
-    //Cart
-    
+    public function getProductByCategory($category){
+        include "config/dbconnect.php";
+        $sql="SELECT * FROM products WHERE category=?";
+        $stmt=$pdo->prepare($sql);
+        $stmt->execute([$category]);
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
 ?>
