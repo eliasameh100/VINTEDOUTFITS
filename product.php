@@ -8,10 +8,7 @@ if(isset($_GET['id'])){
     $_SESSION['id']=$product['id'];
     $_SESSION['itemname']=$product['productname'];
     $_SESSION['itemprice']=$product['productprice'];
-    $_SESSION['category']=$product['category'];
 }
-$product_category=$_SESSION['category'];
-$category=$products->
 ?>
 
 
@@ -35,9 +32,6 @@ $category=$products->
         <h3><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
         <h6><?php echo '$'.$product['productprice'];?></h6>
-        <form method="Get">
-            <input type="number" name="quantity" value="1" size="2">
-        </form>
         <a href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary">Add To Cart</a>
         <!-- <div class="my-1">
             <form action="cart.php?id=<?php echo $product['id'];?>" method="Get">

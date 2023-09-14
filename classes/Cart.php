@@ -18,19 +18,11 @@ class Carts{
     }
 
     public function getCartItemById($productid){
-        include "config/dbconnect.php";
+        include "../config/dbconnect.php";
         $sql="SELECT FROM cart WHERE id=productid";
         $stmt=$pdo->prepare($sql);
         $stmt->execute([$productid]);
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        return $result;
-    }
-
-    public function removeFromCart($id){
-        include "../config/dbconnect.php";
-        $sql="DELETE FROM cart WHERE id=?";
-        $stmt=$pdo->prepare($sql);
-        $result=$stmt->execute([$id]);
         return $result;
     }
 
@@ -47,6 +39,14 @@ class Carts{
         $sql="DELETE FROM cart";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute();
+        return $result;
+    }
+
+    public function removeFromCart($id){
+        include "../config/dbconnect.php";
+        $sql="DELETE FROM cart WHERE id=?";
+        $stmt=$pdo->prepare($sql);
+        $result=$stmt->execute([$id]);
         return $result;
     }
 
@@ -67,6 +67,14 @@ class Carts{
         return $result;
     }
 
+    public function removeAllFromOrder(){
+        include "config/dbconnect.php";
+        $sql="DELETE FROM order";
+        $stmt=$pdo->prepare($sql);
+        $result=$stmt->execute();
+        return $result;
+    }
+
     
     public function totalPrice(){
         include "config/dbconnect.php";
@@ -78,8 +86,8 @@ class Carts{
     }
 
     public function increaseQuantity($itemprice,$id){
-        include "config/dbconnect.php";
-        $sql="UPDATE cart SET itemprice=itemprice+1,quantity=quantity+1 WHERE id=?";
+        include "../config/dbconnect.php";
+        $sql="UPDATE cart SET itemprice=itemprice+?,quantity=quantity+1 WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$itemprice,$id]);
         return $result;
@@ -87,7 +95,7 @@ class Carts{
 
     public function reduceQuantity($itemprice,$id){
         include "config/dbconnect.php";
-        $sql="UPDATE cart SET itemprice=itemprice-1.quantity=quantity-1 WHERE id=?";
+        $sql="UPDATE cart SET itemprice=itemprice-?.quantity=quantity-1 WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$itemprice,$id]);
         return $result;

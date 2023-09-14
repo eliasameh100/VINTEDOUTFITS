@@ -9,10 +9,10 @@ if(isset($_GET['id'])){
     $cart_Instance=new Carts();
     $add = $cart_Instance->addingToCart($productid,$itemname,$itemprice);
         if($add){
-            $_SESSION['success']="successful";
+            $_SESSION['success']="Product Added To Cart Successfully";
             header("Location: ../cart.php");
         }else{
-            $_SESSION['error']="not success";
+            $_SESSION['error']="Something Went Wrong";
         }
     // $result=$cart_Instance->getCartItemById($productid);
     // $cartproductid=$result['productid'];

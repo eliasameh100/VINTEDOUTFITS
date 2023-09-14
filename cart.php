@@ -3,7 +3,8 @@ session_start();
 include "classes/Cart.php";
 $cart=new Carts();
 $cart_ins=$cart->getAllCartItems();
-$_SESSION['itemprice']=$cart_ins['productprice'];
+$order=$cart->getAllOrders();
+$clear=$cart->removeAllFromOrder();
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +17,18 @@ $_SESSION['itemprice']=$cart_ins['productprice'];
 </head>
 <body>
     <?php include "components/navbar.php";?>
-    <?php
-            if(isset($_SESSION['success'])){
-                echo $_SESSION['success'];
-                unset ($_SESSION['success']);
-            }
-            if(isset($_SESSION['error'])){
-                echo $_SESSION['error'];
-                unset ($_SESSION['error']);
-            }
-    ?>
+        <div class="alert alert-success">
+             <?php
+                    if(isset($_SESSION['success'])){
+                        echo $_SESSION['success'];
+                        unset ($_SESSION['success']);
+                    }
+                    if(isset($_SESSION['error'])){
+                        echo $_SESSION['error'];
+                        unset ($_SESSION['error']);
+                    }
+            ?>
+        </div>
     <table class="table">
         <tr>
             <th>ID</th>
@@ -42,14 +45,15 @@ $_SESSION['itemprice']=$cart_ins['productprice'];
             <td><?php echo $item['quantity'];?></td>
             <td><?php echo '$'.$item['itemprice'];?></td>
             <td>
-                <a class="btn btn-danger btn-sm" href="processes/deletecart.php?id=<?php echo $item['id'];?>">Remove</a>
+                <a class="btn btn-success btn-sm" href="processes/update.php?id=<?php echo $item['id'];?>">+</a>
+                <a class="btn btn-danger btn-sm" href="processes/deletecart.php?id=<?php echo $item['id'];?>">-</a>
             </td>
         </tr>
         <?php }?>
-        <div class="text-end">
-            h1
-        </div>
     </table>
+    <div class="text-end">
+        <h5>Total Price<br><p>$<?php echo implode($cart->totalPrice());?></p></h5>
+    </div>
     <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
 </body>
 </html>

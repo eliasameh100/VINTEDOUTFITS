@@ -6,14 +6,14 @@ if(isset($_GET['id'])){
     $itemprice=$_SESSION['itemprice'];
     $cart_Instance=new Carts();
     $result=$cart_Instance->increaseQuantity($itemprice,$id);
-    if(!$result){
-        $_SESSION['error']="Something Is Wrong";
+    if($result){
+        $_SESSION['success']="Added Successfully";
         header("location:../cart.php");
         exit();
     }else{
-        $_SESSION['success']="Updated Successfully"
-        header("location:../cart.php")
+        $_SESSION['error']="Unable To Add";
+        header("location:../cart.php");
         exit();
-    }
+}
 }
 ?>
