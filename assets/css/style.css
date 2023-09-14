@@ -1,4 +1,6 @@
-.img{
-    width: 20px;
-    height: 15px;
+.body{
+    background-image: url(assets/images/clothes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
