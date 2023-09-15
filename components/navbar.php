@@ -33,7 +33,7 @@
           <a class="nav-link" href="products.php">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cart.php"><img src="assets/images/cart.png" alt="" style="width:30px; height: 30px;"></a>
+          <a class="nav-link" href="cart.php"><img class="cart" src="assets/images/cart.png" alt="" style="width:30px; height: 30px;"></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
