@@ -11,7 +11,14 @@
     <title>Welcome page</title>
     <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
 </head>
-<body>
+<style>
+    body{
+    background-image: url(assets/images/images 4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+}
+</style>
     <?php include_once "components/navbar.php";?>
     <div class="container-fluid">
         <div class="content">
