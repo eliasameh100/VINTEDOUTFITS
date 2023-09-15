@@ -1,3 +1,10 @@
+const addbtn=document.querySelectorAll('.Addtocart');
+addbtn.forEach( (btn)=>{
+    btn.addEventListener('click', addcartfunction);
+});
+function addcartfunction(e){
+ console.log(e.target);
+}
 class CartItem{
     constructor(id,productid,name,price){
         this.id=id;
@@ -34,13 +41,26 @@ class LocalCart{
             //we are calling the object into ARRAY of ARRAY and passing it into a JSON.stringify
             localStorage.setItem(key, JSON.stringify(Object.fromEntries(cart)));
             //this function below updates our cart anytime our localstorage is updated
-            update
+            update();
         }
     }
 
 
     //removing from localstorage base on id
     static removeItemCart(id){
-
+        let cart =LocalCart.getCartItems();
+        if(cart.has(id)){
+            let additem = cart.get(id);
+            if(additem.quantity>1){
+                additem.quantity -=1;
+                cart.set(id, additem);
+            }else{
+                cart.delete(id);
+            }
+            if(cart.length===0)
+            localStorage.clear();
+            localStorage.setItem(key, JSON.stringify(Object.fromEntries(cart)));
+            update();
+        }
     }
 }

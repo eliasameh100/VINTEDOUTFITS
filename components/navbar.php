@@ -40,7 +40,7 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="About.php">About Us</a></li>
+            <li><a class="dropdown-item" href="about.php">About Us</a></li>
             <li><a class="dropdown-item" href="contact.php">Contact Us</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
