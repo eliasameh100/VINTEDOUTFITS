@@ -32,7 +32,7 @@ if(isset($_GET['id'])){
         <h3><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
         <h6><?php echo '$'.$product['productprice'];?></h6>
-        <a href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary" id="Addtocart">Add To Cart</a>
+        <a href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary">Add To Cart</a>
         <!-- <div class="my-1">
             <form action="cart.php?id=<?php echo $product['id'];?>" method="Get">
                 <input type="hidden" name="id" value="<?php echo $product['id'];?>">

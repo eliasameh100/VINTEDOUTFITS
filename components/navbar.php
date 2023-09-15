@@ -2,8 +2,6 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +14,6 @@
         height: 4rem;
     }
 </style>
-<body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img class="bbb" src="assets/images/logo.png" alt="">
@@ -53,5 +50,3 @@
             <!-- <hr>
             <p class="text-center copyright">Copyright 2023 - my first e-commerce Design</p> -->
 <script src="assets/css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
