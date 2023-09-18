@@ -5,24 +5,6 @@ $cart=new Carts();
 $cart_ins=$cart->getAllCartItems();
 $order=$cart->getAllOrders();
 $clear=$cart->removeAllFromOrder();
-
-
-    include "classes/usersorder.php";
-    $authenticationInstance = new User();
-    if(isset($_POST['register'])){
-        $name=$_POST['name'];
-        $address=$_POST['address'];
-        $register=$authenticationInstance->createUser($name,$address);
-            if(!$register){
-                $_SESSION['error']='Something Went Wrong';
-            }else{
-                $_SESSION['success']='Successfully';
-            }
-
-
-    
-    
-    }
 ?>
 
 <html>
@@ -64,7 +46,7 @@ $clear=$cart->removeAllFromOrder();
                     <td><?php echo '$'.$item['itemprice'];?></td>
                     <td>
                         <a class="btn btn-success btn-sm" href="processes/update.php?id=<?php echo $item['id'];?>">+</a>
-                        <a class="btn btn-danger btn-sm" href="processes/deletecart.php?id=<?php echo $item['id'];?>">-</a>
+                        <a class="btn btn-dark btn-sm" href="processes/deletecart.php?id=<?php echo $item['id'];?>">-</a>
                     </td>
                 </tr>
                 <?php }?>
@@ -73,7 +55,8 @@ $clear=$cart->removeAllFromOrder();
         <div class="text-end">
         <h5>Total Price<br><p>$<?php echo implode($cart->totalPrice());?></p></h5>
     </div>
-    <a name="register" class="btn btn-secondary" href="processes/order.php">Place Order</a>
+    <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
+    <a class="btn btn-danger" href="">Delete Cart</a>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
