@@ -50,11 +50,11 @@ class Carts{
         return $result;
     }
 
-    public function placeOrder(){
+    public function placeOrder($name,$address){
         include "../config/dbconnect.php";
-        $sql="INSERT INTO order (productname,quantity,price) SELECT productname,quantity,productprice FROM cart";
+        $sql="INSERT INTO orders (name,address) VALUES(?,?)";
         $stmt=$pdo->prepare($sql);
-        $result=$stmt->execute();
+        $result=$stmt->execute([$name,$address]);
         return $result;
     }
 
@@ -94,8 +94,8 @@ class Carts{
     }
 
     public function reduceQuantity($itemprice,$id){
-        include "config/dbconnect.php";
-        $sql="UPDATE cart SET itemprice=itemprice-?.quantity=quantity-1 WHERE id=?";
+        include "../config/dbconnect.php";
+        $sql="UPDATE cart SET itemprice=itemprice-?,quantity=quantity-1 WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$itemprice,$id]);
         return $result;

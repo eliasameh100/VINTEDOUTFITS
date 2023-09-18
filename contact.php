@@ -13,7 +13,7 @@
 </head>
 <style>
     body{
-        background-image: url(assets/images/img10.JPG);
+        background-image: url(assets/images/JPG);
         background-repeat: no-repeat;
         background-position: center;
     }

@@ -29,10 +29,11 @@ if(isset($_GET['id'])){
         ?>
     <div class=" text-center container">
     <?php echo '<img src="uploads/'.$product['productimages'].'" alt="">';?>
-        <h3><?php echo $product['productname'];?></h3>
+        <h3 id="name"><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
-        <h6><?php echo '$'.$product['productprice'];?></h6>
-        <a href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary">Add To Cart</a>
+        <h6 id="price"><?php echo '$'.$product['productprice'];?></h6>
+        <input type="number" id="qty" value="1"><br>
+        <a id="item" href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary mt-1">Add To Cart</a>
         <!-- <div class="my-1">
             <form action="cart.php?id=<?php echo $product['id'];?>" method="Get">
                 <input type="hidden" name="id" value="<?php echo $product['id'];?>">

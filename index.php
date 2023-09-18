@@ -28,7 +28,7 @@
         <div class="content">
             <p class="h1 text-center mb-2">VINTEDOUTFITS</p>
             <p class="h6 mt-2 text-center">Motto:: Giving You The Best Of Looks</p>
-            <h3 class="text-center my-3">Welcome Extinguish User</h3>
+            <h3 class="text-center my-3">Welcome User To VINTEDOUTFITS Shopping Platform</h3>
         </div>
         <div class="my-2 container text-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, omnis.

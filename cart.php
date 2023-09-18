@@ -5,6 +5,24 @@ $cart=new Carts();
 $cart_ins=$cart->getAllCartItems();
 $order=$cart->getAllOrders();
 $clear=$cart->removeAllFromOrder();
+
+
+    include "classes/usersorder.php";
+    $authenticationInstance = new User();
+    if(isset($_POST['register'])){
+        $name=$_POST['name'];
+        $address=$_POST['address'];
+        $register=$authenticationInstance->createUser($name,$address);
+            if(!$register){
+                $_SESSION['error']='Something Went Wrong';
+            }else{
+                $_SESSION['success']='Successfully';
+            }
+
+
+    
+    
+    }
 ?>
 
 <html>
@@ -29,13 +47,13 @@ $clear=$cart->removeAllFromOrder();
             ?>
         </div>
         <div class="allcart">
-                <table class="table">
+                <table class="table my-6">
                 <tr>
-                    <th>ID</th>
+                    <!-- <th>ID</th>
                     <th>PRODUCTID</th>
                     <th>NAME</th>
                     <th>QUANTITY</th>
-                    <th>PRICE</th>
+                    <th>PRICE</th> -->
                 </tr>
                 <?php foreach($cart_ins as $item){?>
                 <tr>
@@ -55,6 +73,7 @@ $clear=$cart->removeAllFromOrder();
         <div class="text-end">
         <h5>Total Price<br><p>$<?php echo implode($cart->totalPrice());?></p></h5>
     </div>
-    <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
+    <a name="register" class="btn btn-secondary" href="processes/order.php">Place Order</a>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
