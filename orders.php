@@ -1,7 +1,7 @@
 <?php
-if(!isset($_SESSION['name'])){
-    header('location:register.php');
-}
+// if(!isset($_SESSION['name'])){
+//     header('location:register.php');
+// }
 ?>
 
 <html>

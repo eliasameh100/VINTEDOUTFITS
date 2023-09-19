@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2023 at 08:33 PM
+-- Generation Time: Sep 19, 2023 at 02:30 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.23
 
@@ -35,6 +35,14 @@ CREATE TABLE `cart` (
   `quantity` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `productid`, `itemname`, `itemprice`, `quantity`) VALUES
+(36, 3, 'Family Atire', 45.00, 3),
+(37, 2, 'T-Shirt & Short', 10.89, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -43,10 +51,12 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `itemname` varchar(100) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
   `address` text NOT NULL,
-  `date` datetime NOT NULL DEFAULT current_timestamp(),
-  `basket` varchar(100) NOT NULL
+  `price` double(10,2) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -79,6 +89,31 @@ INSERT INTO `products` (`id`, `productimages`, `productname`, `productdescriptio
 (9, 'watch1.jpg', 'Comfort Watch ', 'Light,Flexible wrist watch for both men and women', 20.00),
 (10, 'rolex.jpg', 'Rolex Watch', 'This is a classic wrist watch which gives style to someones wrist', 25.05);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `address`) VALUES
+(1, 'praise', 'otukpo'),
+(2, '', ''),
+(3, 'abel', 'idah str'),
+(4, 'praise', 'otukpo'),
+(5, 'elias', 'otukpo'),
+(6, 'marthias', 'quater'),
+(7, 'praise', 'otukpo');
+
 --
 -- Indexes for dumped tables
 --
@@ -102,6 +137,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -109,7 +150,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -122,6 +163,12 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
