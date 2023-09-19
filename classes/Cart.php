@@ -43,7 +43,7 @@ class Carts{
     }
 
     public function removeFromCart($id){
-        include "../config/dbconnect.php";
+        include "config/dbconnect.php";
         $sql="DELETE FROM cart WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$id]);
@@ -51,7 +51,7 @@ class Carts{
     }
 
     public function placeOrder(){
-        include "../config/dbconnect.php";
+        include "config/dbconnect.php";
         $sql="INSERT INTO orders (itemname,quantity,price,name,address) SELECT cart.itemname AS itemname,cart.itemprice AS itemprice,cart.quantity AS quantity,users.name AS name,users.address AS address FROM cart,users";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute();
