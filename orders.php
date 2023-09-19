@@ -11,6 +11,7 @@ if(!isset($_SESSION['name'])){
     </head>
 
     <body>
+        <?php include "components/navbar.php";?>
         <table class="table my-6">
             <tr>
                 <th>id</th>
