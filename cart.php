@@ -29,7 +29,7 @@ $clear=$cart->removeAllFromOrder();
             ?>
         </div>
         <div class="allcart">
-                <table class="table my-6">
+            <table class="table my-6">
                 <tr>
                     <!-- <th>ID</th>
                     <th>PRODUCTID</th>
@@ -37,7 +37,7 @@ $clear=$cart->removeAllFromOrder();
                     <th>QUANTITY</th>
                     <th>PRICE</th> -->
                 </tr>
-                <?php foreach($cart_ins as $item){?>
+                    <?php foreach($cart_ins as $item){?>
                 <tr>
                     <td><?php echo $item['id'];?></td>
                     <td><?php echo $item['productid'];?></td>
@@ -55,7 +55,7 @@ $clear=$cart->removeAllFromOrder();
         <div class="text-end">
         <h5>Total Price<br><p>$<?php echo implode($cart->totalPrice());?></p></h5>
     </div>
-    <a class="btn btn-secondary" href="processes/order.php">Place Order</a>
+    <a class="btn btn-secondary" href="register.php">Place Order</a>
     <a class="btn btn-danger" href="">Delete Cart</a>
     <script src="assets/js/script.js"></script>
 </body>

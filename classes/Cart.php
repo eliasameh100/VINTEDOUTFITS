@@ -50,11 +50,11 @@ class Carts{
         return $result;
     }
 
-    public function placeOrder($name,$address){
+    public function placeOrder(){
         include "../config/dbconnect.php";
-        $sql="INSERT INTO orders (name,address) VALUES(?,?)";
+        $sql="INSERT INTO orders (itemname,quantity,price,name,address) SELECT cart.itemname AS itemname,cart.itemprice AS itemprice,cart.quantity AS quantity";
         $stmt=$pdo->prepare($sql);
-        $result=$stmt->execute([$name,$address]);
+        $result=$stmt->execute();
         return $result;
     }
 
@@ -98,6 +98,13 @@ class Carts{
         $sql="UPDATE cart SET itemprice=itemprice-?,quantity=quantity-1 WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$itemprice,$id]);
+        return $result;
+    }
+    public function createUser($name,$address){
+        include "config/dbconnect.php";
+        $sql = "INSERT INTO users (name,address) VALUES (?,?)";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute([$name,$address]);
         return $result;
     }
 }

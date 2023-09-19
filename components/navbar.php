@@ -37,6 +37,9 @@
       <li class="nav-item">
         <a class="nav-link" href="contact.php">Contact Us</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="orders.php">Order</a>
+      </li>
     </ul>
   </div>
   <script src="assets/css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>

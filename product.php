@@ -32,7 +32,6 @@ if(isset($_GET['id'])){
         <h3 id="name"><?php echo $product['productname'];?></h3>
         <h5><?php echo $product['productdescription'];?></h5>
         <h6 id="price"><?php echo '$'.$product['productprice'];?></h6>
-        <input type="number" id="qty" value="1"><br>
         <a id="item" href="processes/addcart.php?id=<?php echo $product['id']?>" class="btn btn-secondary mt-1">Add To Cart</a>
         <!-- <div class="my-1">
             <form action="cart.php?id=<?php echo $product['id'];?>" method="Get">
