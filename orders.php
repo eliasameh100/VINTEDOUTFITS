@@ -2,6 +2,9 @@
 // if(!isset($_SESSION['name'])){
 //     header('location:register.php');
 // }
+include "classes/Cart.php";
+$cart=new Carts();
+$cartinstance=$cart->getAllOrders();
 ?>
 
 <html>
@@ -20,14 +23,15 @@
                 <th>quantity</th>
                 <th>price</th>
             </tr>
-    
+            <?php foreach($cartinstance as $cart){?>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo $cart['id'];?></td>
+                <td><?php echo $cart['itemname'];?></td>
+                <td><?php echo $cart['price'];?></td>
+                <td><?php echo $cart['quantity'];?></td>
+                <td><?php echo $cart['date'];?></td>
             </tr>
+            <?php }?>
         </table>
     </body>
 </html>

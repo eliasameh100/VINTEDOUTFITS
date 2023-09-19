@@ -10,7 +10,6 @@ if(isset($_POST['buy'])){
     $insert=new Carts();
     $insert->createUser($name,$address);
     $insert->placeOrder();
-    $insert->removeFromCart($id);
     header('location:orders.php');
     exit();
 }

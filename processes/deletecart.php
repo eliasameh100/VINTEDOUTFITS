@@ -2,12 +2,10 @@
 if(isset($_GET['id'])){
     include "../classes/Cart.php";
     $id=$_GET['id'];
-    $productid=$_SESSION['id'];
-    $itemprice=$_SESSION['itemprice'];
     $cart=new Carts();
-    $product=$cart->getCartItemById($productid);
+    $product=$cart->getCartItemById($id);
     $quantityprice=$product['itemprice'];
-    if($quantityprice > $ $itemprice){
+    if($quantityprice > $ $product){
         $reduce=$cart->reduceQuantity($itemprice,$id);
         if($reduce){
             $_SESSION['success']="Added Successfully";

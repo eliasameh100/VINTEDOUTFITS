@@ -43,7 +43,7 @@ class Carts{
     }
 
     public function removeFromCart($id){
-        include "config/dbconnect.php";
+        include "../config/dbconnect.php";
         $sql="DELETE FROM cart WHERE id=?";
         $stmt=$pdo->prepare($sql);
         $result=$stmt->execute([$id]);
