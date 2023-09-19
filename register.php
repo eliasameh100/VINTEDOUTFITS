@@ -8,7 +8,9 @@ if(isset($_POST['buy'])){
     $name=$_POST['name'];
     $address=$_POST['address'];
     $insert=new Carts();
-    $inserinstance=$insert->createUser($name,$address);
+    $insert->createUser($name,$address);
+    $insert->placeOrder();
+    $insert->removeFromCart($id);
     header('location:orders.php');
     exit();
 }
