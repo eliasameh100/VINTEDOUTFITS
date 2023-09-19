@@ -9,7 +9,7 @@ if(isset($_POST['buy'])){
     $address=$_POST['address'];
     $insert=new Carts();
     $inserinstance=$insert->createUser($name,$address);
-    header('location:index.php');
+    header('location:orders.php');
     exit();
 }
 
