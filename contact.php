@@ -13,8 +13,8 @@
 </head>
 <style>
     body{
-        background-image: url(assets/images/JPG);
-        background-repeat: no-repeat;
+        background-image: url(assets/images/back2.jpg);
+        background-repeat: ;
         background-position: center;
     }
 </style>
@@ -26,10 +26,8 @@
         </div>
         <div class="container">
             <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, tempora?<br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, modi!<br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, rem!<br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, possimus.<br>
+            Having any issues, contact our officials on their platforms.<br>
+            Tell us how you feel about our products, and how we can help::
             </p>
         </div>
         <div class="container">

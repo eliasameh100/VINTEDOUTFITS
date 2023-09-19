@@ -31,14 +31,11 @@
             <h3 class="text-center my-3">Welcome User To VINTEDOUTFITS Shopping Platform</h3>
         </div>
         <div class="my-2 container text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, omnis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, non.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, sit.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, vitae.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, porro.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, rem.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, facere.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, voluptatum.
+            Buying clothes online should be meaningful and enjoyable, just like the experience a customer gets in a brick-and-mortar store. Besides meeting standard quality requirements for visuals, you should create the best possible presentation of apparel items for customers to feel confident about their choice.
+            On the product images and video, show models wearing the clothes to give customers a sense of how different fashions and styles look on real people.
+            If you create apparel for different body types, state this in the product description and add to filters.
+            Use 360-degree rotatable product images.
+            Stress some interesting details on feature callout images
         </div>
         <center>
             <div class="container ">
@@ -48,14 +45,9 @@
             </div>
         </center>
         <div class="my-2 container text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, incidunt.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, sit.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, nihil.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, exercitationem?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, corporis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, possimus!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, consequuntur.
+        The online store boasts a wide selection of sports and active lifestyle apparel,footwear and accessories.
+        Along with providing advanced search capabilities, the retailer encourages feedback from customers,
+        which aids others in purchasing decisions.
         </div>
         <center>
             <div class="container ">
@@ -65,14 +57,9 @@
             </div>
         </center>
         <div class="my-2 container text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, incidunt.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, sit.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, nihil.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, exercitationem?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, corporis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, possimus!
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, consequuntur.
+        The company sells fashionable apparel including lingerie, nightwear,and accessories for women.
+        We maintain an elegant user experience throughout the website with product recommendations,
+        faceted navigation and live chat support.
         </div>
         <center>
             <div class="container ">

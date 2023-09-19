@@ -20,7 +20,7 @@
                 <th>quantity</th>
                 <th>price</th>
             </tr>
-                
+    
             <tr>
                 <td></td>
                 <td></td>
